@@ -1,5 +1,5 @@
 import EarlyAccess from "./EarlyAccess.jsx";
-import Header from "../components/header/Header.jsx";
+import Header from "../components/Header.jsx";
 import {Outlet, ScrollRestoration} from "react-router";
 
 const Root = () => {

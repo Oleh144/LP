@@ -1,7 +1,7 @@
 import {Box, Button, Container, Flex, Image} from "@chakra-ui/react";
 import {useState} from "react";
 import {CiMenuBurger} from "react-icons/ci";
-import HeaderLink from "../HeaderLink.jsx";
+import HeaderLink from "./HeaderLink.jsx";
 
 function Header() {
   const [isActive, setIsActive] = useState(false)
