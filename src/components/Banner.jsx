@@ -3,7 +3,7 @@ import {Box, Button, Center, Container, Flex, Heading, Image as ChakraImage, Tex
 export default function Banner({targetRef}) {
 
 
-    let handleScrol = (ref) => {
+    let handleScroll = (ref) => {
         if (targetRef.current) {
             targetRef.current.scrollIntoView({
                 behavior: 'smooth',
@@ -14,9 +14,12 @@ export default function Banner({targetRef}) {
 
     return (<Box
         as="section"
-        py={{base: "sectionSpace", md: "sectionSpaceMd", lg: "sectionSpaceLg"}}
+        id="early-access-section"
+        py={{base: "15px", md: "sectionSpaceMd", lg: "sectionSpaceLg"}}
         minHeight={{md: "calc(100vh - 102px)"}}
-        position="relative"
+        position={{md: "relative"}}
+        display={{md: "flex"}}
+        alignItems={{md: "center"}}
     >
         <Container
             maxW="container"
@@ -24,10 +27,10 @@ export default function Banner({targetRef}) {
             <Flex
                 direction={{base: "column-reverse", md: "row-reverse"}}
                 align={{base: "center"}}
-                gap={{base: 9, md: 0}}
+                gap={{base: "36px", md: "0"}}
             >
                 <Box width={{md: '50%'}}>
-                    <ChakraImage src="/banner-img.png"/>
+                    <ChakraImage src="/banner-img.png" />
                 </Box>
                 <Box width={{md: '50%'}}>
                     <Heading
@@ -56,8 +59,9 @@ export default function Banner({targetRef}) {
                 </Box>
             </Flex>
         </Container>
-        <Flex flexDirection="column" alignItems="center" gap="10px" position="absolute" bottom="3%" left="50%" transform="translateX(-50%)" onClick={() => handleScrol(targetRef)} cursor="pointer" __hover={{color: "#71A894"}}>
-            <ChakraImage width="18px" src="/mouse.svg"/>
+        <Flex hideBelow="md" flexDirection="column" alignItems="center" gap="10px" position="absolute" bottom="3%" left="50%" transform="translateX(-50%)" onClick={() => handleScroll(targetRef)} cursor="pointer" __hover={{color: "#71A894"}}
+        >
+            <ChakraImage width="18px" src="/mouse.svg" />
             <Text>Scroll down</Text>
         </Flex>
     </Box>)

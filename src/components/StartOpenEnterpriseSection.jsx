@@ -29,7 +29,7 @@ function StartOpenEnterpriseSection() {
                             color="gray"
                             mb={{base: 4, lg: 9}}
                         >If you can’t wait to run a new or existing organization on Open Enterprise and are willing to explore and navigate the beta, we’d love to get you started.</Text>
-                        <Button size="2xl" bg="secondary" rounded="8px" asChild>
+                        <Button size={{base: "xl", md: "2xl"}} bg="secondary" rounded="8px" asChild>
                             <a href="#">Request early access</a>
                         </Button>
                     </Box>

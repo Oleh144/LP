@@ -13,8 +13,8 @@ const EarlyAccess = () => {
     return (
         <>
             <Header/>
-            <Banner targetRef={targetRef}/>
             <main id="main">
+                <Banner targetRef={targetRef}/>
                 <Box ref={targetRef}></Box>
                 <HowWeWorkSection/>
                 <FeatureSection/>

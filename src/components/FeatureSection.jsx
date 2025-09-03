@@ -1,4 +1,4 @@
-import {Box, Container, Flex, Text} from "@chakra-ui/react";
+import {Box, Container} from "@chakra-ui/react";
 import FeatureItem from "./FeatureItem.jsx";
 
 function FeatureSection() {
@@ -27,13 +27,14 @@ function FeatureSection() {
     return (
         <Box
             as="section"
+            id="feature-section"
             py={{base: "sectionSpace", md: "sectionSpaceMd", lg: "sectionSpaceLg"}}
         >
             <Container
                 maxW="container"
             >
                 {features.map((item, index) => (
-                    <FeatureItem key={item.title} {...item} reverse={index % 2 === 0} isLast={index === features.length - 1}/>
+                    <FeatureItem key={item.title} {...item} reverse={index % 2 === 0} isLast={index === features.length - 1} />
                 ))}
             </Container>
         </Box>

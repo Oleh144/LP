@@ -11,6 +11,7 @@ export default function HowWeWorkSection() {
     return (
         <Box
             as="section"
+            id="how-we-work-section"
             py={{base: "sectionSpace", md: "sectionSpaceMd", lg: "sectionSpaceLg"}}
         >
             <Container

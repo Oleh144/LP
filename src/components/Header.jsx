@@ -1,14 +1,57 @@
-import {Box, Button, Container, Flex, Image} from "@chakra-ui/react";
+import {Box, Container, Flex, Image} from "@chakra-ui/react";
 import {useEffect, useState} from "react";
 import {CiMenuBurger} from "react-icons/ci";
 import HeaderLink from "./HeaderLink.jsx";
 
 function Header() {
-    const [isActive, setIsActive] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
     const [scrollY, setScrollY] = useState(0);
+    const [isActive, setIsActive] = useState('')
+    const sections = [
+        {
+            id: "help-us-section",
+            linkName: "Why Open Enterprise"
+        },
+        {
+            id: "feature-section",
+            linkName: "Features"
+        },
+        {
+            id: "how-we-work-section",
+            linkName: "Contribute"
+        },
+        {
+            id: "early-access-section",
+            linkName: "Request early access"
+        }
+    ];
+
+    useEffect(() => {
+        const observers = [];
+
+        sections.forEach((id) => {
+            const section = document.getElementById(id.id);
+            if (!section) return;
+
+            const observer = new IntersectionObserver(
+                ([entry]) => {
+                    if (entry.isIntersecting) setIsActive(id.id);
+                },
+                {
+                    rootMargin: "-50% 0px -50% 0px", // активация при центре экрана
+                    threshold: 0,
+                }
+            );
+
+            observer.observe(section);
+            observers.push(observer);
+        });
+
+        return () => observers.forEach((o) => o.disconnect());
+    }, []);
 
     function toggleMenu() {
-        setIsActive(!isActive)
+        setIsOpen(!isOpen)
     }
 
 
@@ -65,15 +108,16 @@ function Header() {
                             bgColor={{base: "white", md: "transparent"}}
                             flexDirection={{base: "column", md: "row"}}
                             position={{base: "absolute", md: "static"}}
-                            translate={{base: isActive ? "0" : "-100%", md: "0"}}
+                            translate={{base: isOpen ? "0" : "-100%", md: "0"}}
                             transition="all 0.3s ease-in-out"
                             fontSize={{base: "16px", md: "14px", lg: "20px"}}
                             borderBottom={{base: "1px solid #E5E5E5", md: "none"}}
                         >
-                            <HeaderLink to='/Why Open Enterprise'>Why Open Enterprise</HeaderLink>
-                            <HeaderLink to='/Features'>Features</HeaderLink>
-                            <HeaderLink to='/Contribute'>Contribute</HeaderLink>
-                            <HeaderLink to="/">Request early access</HeaderLink>
+                            {
+                                sections.map(id => (
+                                    <HeaderLink key={id} to={`#${id.id}`} sectionId={id.id} isActive={isActive === id.id}>{id.linkName}</HeaderLink>
+                                ))
+                            }
                         </Flex>
                     </Flex>
                     <Box
