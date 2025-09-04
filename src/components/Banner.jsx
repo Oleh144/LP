@@ -1,4 +1,6 @@
 import {Box, Button, Center, Container, Flex, Heading, Image as ChakraImage, Text} from "@chakra-ui/react";
+import bannerImg from "../assets/banner-img.png";
+import mouse from "../assets/mouse.svg";
 
 export default function Banner({targetRef}) {
 
@@ -30,7 +32,7 @@ export default function Banner({targetRef}) {
                 gap={{base: "36px", md: "0"}}
             >
                 <Box width={{md: '50%'}}>
-                    <ChakraImage src="/banner-img.png" />
+                    <ChakraImage src={bannerImg} />
                 </Box>
                 <Box width={{md: '50%'}}>
                     <Heading
@@ -61,7 +63,7 @@ export default function Banner({targetRef}) {
         </Container>
         <Flex hideBelow="md" flexDirection="column" alignItems="center" gap="10px" position="absolute" bottom="3%" left="50%" transform="translateX(-50%)" onClick={() => handleScroll(targetRef)} cursor="pointer" __hover={{color: "#71A894"}}
         >
-            <ChakraImage width="18px" src="/mouse.svg" />
+            <ChakraImage width="18px" src={mouse} />
             <Text>Scroll down</Text>
         </Flex>
     </Box>)

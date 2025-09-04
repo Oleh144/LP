@@ -6,6 +6,9 @@ import {
     Text,
 } from "@chakra-ui/react";
 import ReactCard from "./HowWeWorkCard.jsx";
+import workIcon01 from "../assets/work-icon-01.svg";
+import workIcon02 from "../assets/work-icon-02.svg";
+import workIcon03 from "../assets/work-icon-03.svg";
 
 export default function HowWeWorkSection() {
     return (
@@ -32,9 +35,9 @@ export default function HowWeWorkSection() {
                     direction={{base: "column", md: "row"}}
                     gap={{base: 4, lg: 6}}
                 >
-                    <ReactCard icon="/work-icon-01.svg" title="Modern workforce" body="Multistakeholder governance aligns employees with the organization’s wider community."/>
-                    <ReactCard icon="/work-icon-02.svg" title="Meritocratic by design" body="Tokenized ownership aligns deeply committed individuals with the organization’s success."/>
-                    <ReactCard icon="/work-icon-03.svg" title="Engineered for resilience" body="Open Enterprise supports best practices in sociocratic management."/>
+                    <ReactCard icon={workIcon01} title="Modern workforce" body="Multistakeholder governance aligns employees with the organization’s wider community." />
+                    <ReactCard icon={workIcon02} title="Meritocratic by design" body="Tokenized ownership aligns deeply committed individuals with the organization’s success." />
+                    <ReactCard icon={workIcon03} title="Engineered for resilience" body="Open Enterprise supports best practices in sociocratic management." />
                 </Flex>
             </Container>
         </Box>

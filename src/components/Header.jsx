@@ -2,6 +2,7 @@ import {Box, Container, Flex, Image} from "@chakra-ui/react";
 import {useEffect, useState} from "react";
 import {CiMenuBurger} from "react-icons/ci";
 import HeaderLink from "./HeaderLink.jsx";
+import logo from "../assets/logo.svg";
 
 function Header() {
     const [isOpen, setIsOpen] = useState(false)
@@ -79,7 +80,7 @@ function Header() {
                         >
                             <Box transition="max-width .3s, marginRight .3s" maxWidth={scrollY ? "68px" : "0"} marginRight={scrollY ? "10px" : "0"}>
                                 <Image
-                                    src="/logo.svg"
+                                    src={logo}
                                     alt="Logo"
                                 />
                             </Box>

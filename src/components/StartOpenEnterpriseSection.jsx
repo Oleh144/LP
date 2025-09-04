@@ -1,4 +1,5 @@
 import {Box, Container, Flex, Heading, Text, Image as ChakraImage, Button} from "@chakra-ui/react";
+import enterpriseImg01 from "../assets/enterprise-img-01.png";
 
 function StartOpenEnterpriseSection() {
 
@@ -17,7 +18,7 @@ function StartOpenEnterpriseSection() {
                 }} gap={{base: "30px", md: "20px"}}
                 >
                     <Box textAlign={{base: "center", md: "right"}} width={{base: "100%", md: '50%'}}>
-                        <ChakraImage display="inline-block" src="enterprise-img-01.png"/>
+                        <ChakraImage display="inline-block" src={enterpriseImg01} />
                     </Box>
                     <Box textAlign={{base: "center", md: "left"}} width={{base: "100%", md: '50%'}}>
                         <Heading
