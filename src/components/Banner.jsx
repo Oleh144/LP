@@ -3,8 +3,6 @@ import bannerImg from "../assets/banner-img.png";
 import mouse from "../assets/mouse.svg";
 
 export default function Banner({targetRef}) {
-
-
     let handleScroll = (ref) => {
         if (targetRef.current) {
             targetRef.current.scrollIntoView({
@@ -61,7 +59,8 @@ export default function Banner({targetRef}) {
                 </Box>
             </Flex>
         </Container>
-        <Flex hideBelow="md" flexDirection="column" alignItems="center" gap="10px" position="absolute" bottom="3%" left="50%" transform="translateX(-50%)" onClick={() => handleScroll(targetRef)} cursor="pointer" __hover={{color: "#71A894"}}
+        <Flex hideBelow="md" flexDirection="column" alignItems="center" gap="10px" position="absolute" bottom="3%" left="50%" transform="translateX(-50%)"
+              onClick={() => handleScroll(targetRef)} cursor="pointer" __hover={{color: "#71A894"}}
         >
             <ChakraImage width="18px" src={mouse} />
             <Text>Scroll down</Text>

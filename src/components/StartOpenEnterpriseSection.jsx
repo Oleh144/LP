@@ -1,5 +1,6 @@
 import {Box, Container, Flex, Heading, Text, Image as ChakraImage, Button} from "@chakra-ui/react";
 import enterpriseImg01 from "../assets/enterprise-img-01.png";
+import backgroundDots from "../assets/background-dots.png";
 
 function StartOpenEnterpriseSection() {
 
@@ -7,7 +8,7 @@ function StartOpenEnterpriseSection() {
         <Box
             as="section"
             py={{base: "sectionSpace", md: "sectionSpaceMd", lg: "sectionSpaceLg"}}
-            backgroundImage="url('/background-dots.png')" backgroundRepeat="repeat-x"
+            backgroundImage={`url(${backgroundDots})`} backgroundRepeat="repeat-x"
         >
             <Container
                 maxW="container"

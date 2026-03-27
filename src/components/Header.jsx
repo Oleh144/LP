@@ -116,7 +116,7 @@ function Header() {
                         >
                             {
                                 sections.map(id => (
-                                    <HeaderLink key={id} to={`#${id.id}`} sectionId={id.id} isActive={isActive === id.id}>{id.linkName}</HeaderLink>
+                                    <HeaderLink key={id.id} to={`#${id.id}`} sectionId={id.id} isActive={isActive === id.id}>{id.linkName}</HeaderLink>
                                 ))
                             }
                         </Flex>

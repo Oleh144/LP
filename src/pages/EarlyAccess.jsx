@@ -10,18 +10,20 @@ import Header from "../components/Header.jsx";
 
 const EarlyAccess = () => {
     const targetRef = useRef(null);
+
+
     return (
         <>
-            <Header/>
+            <Header />
             <main id="main">
-                <Banner targetRef={targetRef}/>
+                <Banner targetRef={targetRef} />
                 <Box ref={targetRef}></Box>
-                <HowWeWorkSection/>
-                <FeatureSection/>
-                <HelpUsSection/>
-                <StartOpenEnterpriseSection/>
+                <HowWeWorkSection />
+                <FeatureSection />
+                <HelpUsSection />
+                <StartOpenEnterpriseSection />
             </main>
-            <Footer/>
+            <Footer />
         </>
     )
 }
