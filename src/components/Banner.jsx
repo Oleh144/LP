@@ -54,6 +54,8 @@ export default function Banner({targetRef}) {
                             bg="secondary"
                             size={{base: "lg", lg: "2xl"}}
                             rounded="lg"
+                            transition="box-shadow 0.2s ease"
+                            _hover={{boxShadow: "0 0 20px rgba(113, 168, 148, 0.75)"}}
                         >Request early access</Button>
                     </Center>
                 </Box>
