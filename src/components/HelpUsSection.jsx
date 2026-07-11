@@ -39,7 +39,13 @@ export default function HelpUsSection() {
                     <HowWeWorkCard title="Tutorial video series" body="Create a series of video tutorials that cover everything from start to finish on using Open Enterprise." badge="40 AUT" dateApply="Apply by May 20"/>
                 </Flex>
                 <Center>
-                    <Button size={{base: "xl", md: "2xl"}} bg="primary" rounded="8px" asChild>
+                    <Button
+                        size={{base: "xl", md: "2xl"}}
+                        bg="primary"
+                        rounded="8px"
+                        _hover={{bg: "secondary"}}
+                        asChild
+                    >
                         <a href="#">View more</a>
                     </Button>
                 </Center>
