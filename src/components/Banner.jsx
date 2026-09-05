@@ -58,7 +58,12 @@ export default function Banner({ targetRef }) {
 							<Button
 								bg='secondary'
 								size={{ base: "lg", lg: "2xl" }}
-								rounded='lg'>
+								rounded='lg'
+								transition='box-shadow 0.2s ease'
+								_hover={{
+									boxShadow:
+										"0 0 20px rgba(113, 168, 148, 0.75)",
+								}}>
 								Request early access
 							</Button>
 						</Center>
@@ -74,7 +79,7 @@ export default function Banner({ targetRef }) {
 				bottom='3%'
 				left='50%'
 				transform='translateX(-50%)'
-				onClick={() => handleScroll(targetRef)}
+				onClick={handleScroll}
 				cursor='pointer'
 				_hover={{ color: "#71A894" }}>
 				<ChakraImage width='18px' alt='Icon' src={mouse} />

@@ -65,6 +65,7 @@ export default function HelpUsSection() {
 						size={{ base: "xl", md: "2xl" }}
 						bg='primary'
 						rounded='8px'
+						_hover={{ bg: "secondary" }}
 						asChild>
 						<a href='#'>View more</a>
 					</Button>

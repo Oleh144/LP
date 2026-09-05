@@ -60,6 +60,10 @@ function StartOpenEnterpriseSection() {
 							size={{ base: "xl", md: "2xl" }}
 							bg='secondary'
 							rounded='8px'
+							transition='box-shadow 0.2s ease'
+							_hover={{
+								boxShadow: "0 0 20px rgba(113, 168, 148, 0.75)",
+							}}
 							asChild>
 							<a href='#'>Request early access</a>
 						</Button>
