@@ -1,13 +1,12 @@
-import {useState} from 'react'
-import './App.css'
+import "./App.css";
 import EarlyAccess from "./pages/EarlyAccess.jsx";
 
 function App() {
-    return (
-        <>
-            <EarlyAccess/>
-        </>
-    )
+	return (
+		<>
+			<EarlyAccess />
+		</>
+	);
 }
 
-export default App
+export default App;
